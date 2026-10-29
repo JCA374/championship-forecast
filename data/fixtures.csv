@@ -1,0 +1,409 @@
+date,round,home,away
+2026-10-30,13,Sheffield United,Wrexham
+2026-10-31,13,Bolton,Bristol City
+2026-10-31,13,Burnley,Portsmouth
+2026-10-31,13,Lincoln,Birmingham
+2026-10-31,13,Middlesbrough,Charlton
+2026-10-31,13,Millwall,Derby
+2026-10-31,13,Norwich,Watford
+2026-10-31,13,Southampton,QPR
+2026-10-31,13,Stoke,Preston
+2026-10-31,13,Swansea,Blackburn
+2026-10-31,13,West Ham,West Brom
+2026-10-31,13,Wolves,Cardiff
+2026-11-03,14,Birmingham,Millwall
+2026-11-03,14,Blackburn,Stoke
+2026-11-03,14,Charlton,Bolton
+2026-11-03,14,Derby,Norwich
+2026-11-03,14,Portsmouth,Swansea
+2026-11-03,14,Preston,Sheffield United
+2026-11-03,14,QPR,Burnley
+2026-11-03,14,Watford,Lincoln
+2026-11-03,14,West Brom,Southampton
+2026-11-04,14,Bristol City,Wolves
+2026-11-04,14,Cardiff,West Ham
+2026-11-04,14,Wrexham,Middlesbrough
+2026-11-06,15,Derby,Bolton
+2026-11-07,15,Birmingham,Swansea
+2026-11-07,15,Blackburn,West Ham
+2026-11-07,15,Bristol City,Norwich
+2026-11-07,15,Cardiff,Burnley
+2026-11-07,15,Charlton,Sheffield United
+2026-11-07,15,Portsmouth,Stoke
+2026-11-07,15,Preston,Southampton
+2026-11-07,15,QPR,Lincoln
+2026-11-07,15,Watford,Middlesbrough
+2026-11-07,15,West Brom,Millwall
+2026-11-07,15,Wrexham,Wolves
+2026-11-21,16,Bolton,Portsmouth
+2026-11-21,16,Lincoln,Wrexham
+2026-11-21,16,Middlesbrough,Bristol City
+2026-11-21,16,Millwall,QPR
+2026-11-21,16,Norwich,Cardiff
+2026-11-21,16,Sheffield United,Watford
+2026-11-21,16,Southampton,Derby
+2026-11-21,16,Stoke,Birmingham
+2026-11-21,16,Swansea,West Brom
+2026-11-21,16,West Ham,Preston
+2026-11-21,16,Wolves,Charlton
+2026-11-22,16,Burnley,Blackburn
+2026-11-24,17,Bristol City,Wrexham
+2026-11-24,17,Cardiff,Preston
+2026-11-24,17,Charlton,Lincoln
+2026-11-24,17,Middlesbrough,Swansea
+2026-11-24,17,Norwich,QPR
+2026-11-24,17,Portsmouth,West Ham
+2026-11-24,17,Sheffield United,Southampton
+2026-11-24,17,Wolves,Derby
+2026-11-25,17,Bolton,West Brom
+2026-11-25,17,Burnley,Birmingham
+2026-11-25,17,Stoke,Millwall
+2026-11-25,17,Watford,Blackburn
+2026-11-27,18,Southampton,Middlesbrough
+2026-11-28,18,Birmingham,Bolton
+2026-11-28,18,Blackburn,Charlton
+2026-11-28,18,Derby,Watford
+2026-11-28,18,Lincoln,Wolves
+2026-11-28,18,Millwall,Burnley
+2026-11-28,18,Preston,Norwich
+2026-11-28,18,QPR,Sheffield United
+2026-11-28,18,West Brom,Bristol City
+2026-11-28,18,West Ham,Stoke
+2026-11-28,18,Wrexham,Portsmouth
+2026-11-29,18,Swansea,Cardiff
+2026-12-04,19,Sheffield United,West Ham
+2026-12-05,19,Bolton,Blackburn
+2026-12-05,19,Bristol City,Swansea
+2026-12-05,19,Cardiff,Lincoln
+2026-12-05,19,Charlton,Birmingham
+2026-12-05,19,Middlesbrough,Derby
+2026-12-05,19,Norwich,Wrexham
+2026-12-05,19,Portsmouth,West Brom
+2026-12-05,19,Stoke,QPR
+2026-12-05,19,Watford,Millwall
+2026-12-05,19,Wolves,Southampton
+2026-12-06,19,Burnley,Preston
+2026-12-08,20,Birmingham,Watford
+2026-12-08,20,Blackburn,Norwich
+2026-12-08,20,Millwall,Sheffield United
+2026-12-08,20,QPR,Wolves
+2026-12-08,20,Swansea,Bolton
+2026-12-08,20,West Brom,Cardiff
+2026-12-08,20,West Ham,Middlesbrough
+2026-12-08,20,Wrexham,Charlton
+2026-12-09,20,Derby,Bristol City
+2026-12-09,20,Lincoln,Stoke
+2026-12-09,20,Preston,Portsmouth
+2026-12-09,20,Southampton,Burnley
+2026-12-11,21,Bolton,Wrexham
+2026-12-12,21,Blackburn,Derby
+2026-12-12,21,Cardiff,Southampton
+2026-12-12,21,Charlton,Swansea
+2026-12-12,21,Portsmouth,Birmingham
+2026-12-12,21,Preston,Middlesbrough
+2026-12-12,21,QPR,Watford
+2026-12-12,21,Sheffield United,Burnley
+2026-12-12,21,Stoke,West Brom
+2026-12-12,21,West Ham,Bristol City
+2026-12-12,21,Wolves,Millwall
+2026-12-13,21,Lincoln,Norwich
+2026-12-18,22,West Brom,Sheffield United
+2026-12-19,22,Birmingham,West Ham
+2026-12-19,22,Bristol City,Cardiff
+2026-12-19,22,Burnley,Stoke
+2026-12-19,22,Derby,Lincoln
+2026-12-19,22,Middlesbrough,Portsmouth
+2026-12-19,22,Millwall,Charlton
+2026-12-19,22,Norwich,Wolves
+2026-12-19,22,Southampton,Blackburn
+2026-12-19,22,Swansea,Preston
+2026-12-19,22,Watford,Bolton
+2026-12-19,22,Wrexham,QPR
+2026-12-26,23,Blackburn,Birmingham
+2026-12-26,23,Bolton,Burnley
+2026-12-26,23,Cardiff,Millwall
+2026-12-26,23,Charlton,Southampton
+2026-12-26,23,Lincoln,West Brom
+2026-12-26,23,Portsmouth,Watford
+2026-12-26,23,Preston,Derby
+2026-12-26,23,QPR,Bristol City
+2026-12-26,23,Sheffield United,Middlesbrough
+2026-12-26,23,Stoke,Wrexham
+2026-12-26,23,West Ham,Norwich
+2026-12-26,23,Wolves,Swansea
+2026-12-29,24,Birmingham,Cardiff
+2026-12-29,24,Bristol City,Stoke
+2026-12-29,24,Burnley,Lincoln
+2026-12-29,24,Derby,Sheffield United
+2026-12-29,24,Middlesbrough,Bolton
+2026-12-29,24,Millwall,Portsmouth
+2026-12-29,24,Norwich,Charlton
+2026-12-29,24,Southampton,West Ham
+2026-12-29,24,Swansea,QPR
+2026-12-29,24,Watford,Wolves
+2026-12-29,24,West Brom,Preston
+2026-12-29,24,Wrexham,Blackburn
+2027-01-01,25,Birmingham,Portsmouth
+2027-01-01,25,Bristol City,West Ham
+2027-01-01,25,Burnley,Sheffield United
+2027-01-01,25,Derby,Blackburn
+2027-01-01,25,Middlesbrough,Preston
+2027-01-01,25,Millwall,Wolves
+2027-01-01,25,Norwich,Lincoln
+2027-01-01,25,Southampton,Cardiff
+2027-01-01,25,Swansea,Charlton
+2027-01-01,25,Watford,QPR
+2027-01-01,25,West Brom,Stoke
+2027-01-01,25,Wrexham,Bolton
+2027-01-16,26,Blackburn,West Brom
+2027-01-16,26,Bolton,Southampton
+2027-01-16,26,Cardiff,Middlesbrough
+2027-01-16,26,Charlton,Watford
+2027-01-16,26,Lincoln,Millwall
+2027-01-16,26,Portsmouth,Norwich
+2027-01-16,26,Preston,Wrexham
+2027-01-16,26,QPR,Birmingham
+2027-01-16,26,Sheffield United,Bristol City
+2027-01-16,26,Stoke,Derby
+2027-01-16,26,West Ham,Swansea
+2027-01-16,26,Wolves,Burnley
+2027-01-23,27,Birmingham,Lincoln
+2027-01-23,27,Blackburn,Swansea
+2027-01-23,27,Bristol City,Bolton
+2027-01-23,27,Cardiff,Wolves
+2027-01-23,27,Charlton,Middlesbrough
+2027-01-23,27,Derby,Millwall
+2027-01-23,27,Portsmouth,Burnley
+2027-01-23,27,Preston,Stoke
+2027-01-23,27,QPR,Southampton
+2027-01-23,27,Watford,Norwich
+2027-01-23,27,West Brom,West Ham
+2027-01-23,27,Wrexham,Sheffield United
+2027-01-26,28,Bolton,Charlton
+2027-01-26,28,Burnley,QPR
+2027-01-26,28,Lincoln,Watford
+2027-01-26,28,Millwall,Birmingham
+2027-01-26,28,Norwich,Derby
+2027-01-26,28,Sheffield United,Preston
+2027-01-26,28,Southampton,West Brom
+2027-01-26,28,Stoke,Blackburn
+2027-01-27,28,Middlesbrough,Wrexham
+2027-01-27,28,Swansea,Portsmouth
+2027-01-27,28,West Ham,Cardiff
+2027-01-27,28,Wolves,Bristol City
+2027-01-30,29,Bolton,Derby
+2027-01-30,29,Burnley,Cardiff
+2027-01-30,29,Lincoln,QPR
+2027-01-30,29,Middlesbrough,Watford
+2027-01-30,29,Millwall,West Brom
+2027-01-30,29,Norwich,Bristol City
+2027-01-30,29,Sheffield United,Charlton
+2027-01-30,29,Southampton,Preston
+2027-01-30,29,Stoke,Portsmouth
+2027-01-30,29,Swansea,Birmingham
+2027-01-30,29,West Ham,Blackburn
+2027-01-30,29,Wolves,Wrexham
+2027-02-06,30,Birmingham,Stoke
+2027-02-06,30,Blackburn,Burnley
+2027-02-06,30,Bristol City,Middlesbrough
+2027-02-06,30,Cardiff,Norwich
+2027-02-06,30,Charlton,Wolves
+2027-02-06,30,Derby,Southampton
+2027-02-06,30,Portsmouth,Bolton
+2027-02-06,30,Preston,West Ham
+2027-02-06,30,QPR,Millwall
+2027-02-06,30,Watford,Sheffield United
+2027-02-06,30,West Brom,Swansea
+2027-02-06,30,Wrexham,Lincoln
+2027-02-13,31,Birmingham,Derby
+2027-02-13,31,Bristol City,Southampton
+2027-02-13,31,Burnley,Swansea
+2027-02-13,31,Cardiff,Bolton
+2027-02-13,31,Lincoln,Preston
+2027-02-13,31,Millwall,Blackburn
+2027-02-13,31,Norwich,Middlesbrough
+2027-02-13,31,Portsmouth,Charlton
+2027-02-13,31,QPR,West Brom
+2027-02-13,31,Stoke,Watford
+2027-02-13,31,Wolves,Sheffield United
+2027-02-13,31,Wrexham,West Ham
+2027-02-16,32,Blackburn,Bristol City
+2027-02-16,32,Charlton,Burnley
+2027-02-16,32,Derby,QPR
+2027-02-16,32,Preston,Birmingham
+2027-02-16,32,Sheffield United,Portsmouth
+2027-02-16,32,Watford,Cardiff
+2027-02-16,32,West Brom,Wrexham
+2027-02-16,32,West Ham,Lincoln
+2027-02-17,32,Bolton,Wolves
+2027-02-17,32,Middlesbrough,Stoke
+2027-02-17,32,Southampton,Norwich
+2027-02-17,32,Swansea,Millwall
+2027-02-20,33,Blackburn,Portsmouth
+2027-02-20,33,Bolton,Norwich
+2027-02-20,33,Charlton,Cardiff
+2027-02-20,33,Derby,Burnley
+2027-02-20,33,Middlesbrough,Birmingham
+2027-02-20,33,Preston,QPR
+2027-02-20,33,Sheffield United,Stoke
+2027-02-20,33,Southampton,Wrexham
+2027-02-20,33,Swansea,Lincoln
+2027-02-20,33,Watford,Bristol City
+2027-02-20,33,West Brom,Wolves
+2027-02-21,33,West Ham,Millwall
+2027-02-27,34,Birmingham,West Brom
+2027-02-27,34,Bristol City,Charlton
+2027-02-27,34,Burnley,Watford
+2027-02-27,34,Cardiff,Blackburn
+2027-02-27,34,Lincoln,Sheffield United
+2027-02-27,34,Millwall,Preston
+2027-02-27,34,Norwich,Swansea
+2027-02-27,34,QPR,West Ham
+2027-02-27,34,Stoke,Bolton
+2027-02-27,34,Wolves,Middlesbrough
+2027-02-27,34,Wrexham,Derby
+2027-02-28,34,Portsmouth,Southampton
+2027-03-02,35,Bolton,QPR
+2027-03-02,35,Bristol City,Birmingham
+2027-03-02,35,Burnley,West Brom
+2027-03-02,35,Cardiff,Derby
+2027-03-02,35,Charlton,West Ham
+2027-03-02,35,Middlesbrough,Blackburn
+2027-03-02,35,Norwich,Millwall
+2027-03-02,35,Watford,Wrexham
+2027-03-03,35,Portsmouth,Lincoln
+2027-03-03,35,Sheffield United,Swansea
+2027-03-03,35,Stoke,Southampton
+2027-03-03,35,Wolves,Preston
+2027-03-06,36,Birmingham,Sheffield United
+2027-03-06,36,Blackburn,Wolves
+2027-03-06,36,Derby,Charlton
+2027-03-06,36,Lincoln,Middlesbrough
+2027-03-06,36,Millwall,Bristol City
+2027-03-06,36,Preston,Bolton
+2027-03-06,36,QPR,Portsmouth
+2027-03-06,36,Southampton,Watford
+2027-03-06,36,Swansea,Stoke
+2027-03-06,36,West Brom,Norwich
+2027-03-06,36,West Ham,Burnley
+2027-03-06,36,Wrexham,Cardiff
+2027-03-13,37,Bolton,Birmingham
+2027-03-13,37,Bristol City,West Brom
+2027-03-13,37,Burnley,Millwall
+2027-03-13,37,Cardiff,Swansea
+2027-03-13,37,Charlton,Blackburn
+2027-03-13,37,Middlesbrough,Southampton
+2027-03-13,37,Norwich,Preston
+2027-03-13,37,Portsmouth,Wrexham
+2027-03-13,37,Sheffield United,QPR
+2027-03-13,37,Stoke,West Ham
+2027-03-13,37,Watford,Derby
+2027-03-13,37,Wolves,Lincoln
+2027-03-16,38,Derby,Middlesbrough
+2027-03-16,38,Lincoln,Cardiff
+2027-03-16,38,Preston,Burnley
+2027-03-16,38,QPR,Stoke
+2027-03-16,38,Southampton,Wolves
+2027-03-16,38,Swansea,Bristol City
+2027-03-16,38,West Brom,Portsmouth
+2027-03-16,38,Wrexham,Norwich
+2027-03-17,38,Birmingham,Charlton
+2027-03-17,38,Blackburn,Bolton
+2027-03-17,38,Millwall,Watford
+2027-03-17,38,West Ham,Sheffield United
+2027-03-20,39,Birmingham,Blackburn
+2027-03-20,39,Bristol City,QPR
+2027-03-20,39,Burnley,Bolton
+2027-03-20,39,Derby,Preston
+2027-03-20,39,Middlesbrough,Sheffield United
+2027-03-20,39,Millwall,Cardiff
+2027-03-20,39,Norwich,West Ham
+2027-03-20,39,Southampton,Charlton
+2027-03-20,39,Swansea,Wolves
+2027-03-20,39,Watford,Portsmouth
+2027-03-20,39,West Brom,Lincoln
+2027-03-20,39,Wrexham,Stoke
+2027-04-03,40,Blackburn,Southampton
+2027-04-03,40,Bolton,Watford
+2027-04-03,40,Cardiff,Bristol City
+2027-04-03,40,Charlton,Millwall
+2027-04-03,40,Lincoln,Derby
+2027-04-03,40,Portsmouth,Middlesbrough
+2027-04-03,40,Preston,Swansea
+2027-04-03,40,QPR,Wrexham
+2027-04-03,40,Sheffield United,West Brom
+2027-04-03,40,Stoke,Burnley
+2027-04-03,40,West Ham,Birmingham
+2027-04-03,40,Wolves,Norwich
+2027-04-06,41,Burnley,Wrexham
+2027-04-06,41,Lincoln,Bristol City
+2027-04-06,41,Millwall,Middlesbrough
+2027-04-06,41,Portsmouth,Wolves
+2027-04-06,41,QPR,Charlton
+2027-04-06,41,Stoke,Cardiff
+2027-04-06,41,Swansea,Southampton
+2027-04-06,41,West Ham,Bolton
+2027-04-07,41,Birmingham,Norwich
+2027-04-07,41,Preston,Watford
+2027-04-07,41,Sheffield United,Blackburn
+2027-04-07,41,West Brom,Derby
+2027-04-10,42,Blackburn,Preston
+2027-04-10,42,Bolton,Millwall
+2027-04-10,42,Bristol City,Burnley
+2027-04-10,42,Cardiff,Portsmouth
+2027-04-10,42,Charlton,Stoke
+2027-04-10,42,Derby,West Ham
+2027-04-10,42,Middlesbrough,QPR
+2027-04-10,42,Norwich,Sheffield United
+2027-04-10,42,Southampton,Lincoln
+2027-04-10,42,Watford,West Brom
+2027-04-10,42,Wolves,Birmingham
+2027-04-10,42,Wrexham,Swansea
+2027-04-17,43,Birmingham,Wrexham
+2027-04-17,43,Burnley,Norwich
+2027-04-17,43,Lincoln,Bolton
+2027-04-17,43,Millwall,Southampton
+2027-04-17,43,Portsmouth,Bristol City
+2027-04-17,43,Preston,Charlton
+2027-04-17,43,QPR,Blackburn
+2027-04-17,43,Sheffield United,Cardiff
+2027-04-17,43,Stoke,Wolves
+2027-04-17,43,Swansea,Derby
+2027-04-17,43,West Brom,Middlesbrough
+2027-04-17,43,West Ham,Watford
+2027-04-20,44,Bolton,Sheffield United
+2027-04-20,44,Charlton,West Brom
+2027-04-20,44,Derby,Portsmouth
+2027-04-20,44,Middlesbrough,Burnley
+2027-04-20,44,Norwich,Stoke
+2027-04-20,44,Southampton,Birmingham
+2027-04-20,44,Wolves,West Ham
+2027-04-20,44,Wrexham,Millwall
+2027-04-21,44,Blackburn,Lincoln
+2027-04-21,44,Bristol City,Preston
+2027-04-21,44,Cardiff,QPR
+2027-04-21,44,Watford,Swansea
+2027-04-24,45,Bolton,Swansea
+2027-04-24,45,Bristol City,Derby
+2027-04-24,45,Burnley,Southampton
+2027-04-24,45,Cardiff,West Brom
+2027-04-24,45,Charlton,Wrexham
+2027-04-24,45,Middlesbrough,West Ham
+2027-04-24,45,Norwich,Blackburn
+2027-04-24,45,Portsmouth,Preston
+2027-04-24,45,Sheffield United,Millwall
+2027-04-24,45,Stoke,Lincoln
+2027-04-24,45,Watford,Birmingham
+2027-04-24,45,Wolves,QPR
+2027-05-01,46,Birmingham,Burnley
+2027-05-01,46,Blackburn,Watford
+2027-05-01,46,Derby,Wolves
+2027-05-01,46,Lincoln,Charlton
+2027-05-01,46,Millwall,Stoke
+2027-05-01,46,Preston,Cardiff
+2027-05-01,46,QPR,Norwich
+2027-05-01,46,Southampton,Sheffield United
+2027-05-01,46,Swansea,Middlesbrough
+2027-05-01,46,West Brom,Bolton
+2027-05-01,46,West Ham,Portsmouth
+2027-05-01,46,Wrexham,Bristol City
