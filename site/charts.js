@@ -44,6 +44,20 @@ export function showTip(event, title, rows) {
 }
 export const hideTip = () => { tip.hidden = true; };
 
+// Hover on a mouse, tap on a touch screen. On touch the tooltip stays up after the
+// finger lifts (pointerleave fires straight away) until the next tap elsewhere or a scroll.
+export function onHover(node, show, leave = hideTip) {
+  node.addEventListener('pointermove', show);
+  node.addEventListener('pointerdown', show);
+  node.addEventListener('pointerleave', (e) => { if (e.pointerType !== 'touch') leave(e); });
+}
+let tipOwner = null;
+const clearTip = () => { tip.hidden = true; tipOwner?.(); tipOwner = null; };
+// runs before the tapped element's own handler, which shows its tooltip again
+document.addEventListener('pointerdown', (e) => { if (e.pointerType === 'touch') clearTip(); }, { capture: true });
+window.addEventListener('scroll', () => { if (!tip.hidden) clearTip(); }, { passive: true });
+const setOwner = (fn) => { tipOwner = fn; };
+
 // Re-render `draw(width)` whenever the container changes width.
 export function responsive(container, draw) {
   let last = 0;
@@ -116,7 +130,9 @@ export function lineChart(container, { series, xLabel, xTickLabel = (x) => x, ti
     // crosshair
     const hair = el('line', { y1: m.top, y2: H - m.bottom, class: 'crosshair', visibility: 'hidden' }, svg);
     const hit = el('rect', { x: m.left, y: m.top, width: W - m.left - m.right, height: H - m.top - m.bottom, fill: 'transparent' }, svg);
-    hit.addEventListener('pointermove', (e) => {
+    const hideHair = () => hair.setAttribute('visibility', 'hidden');
+    onHover(hit, (e) => {
+      setOwner(hideHair);
       const r = svg.getBoundingClientRect();
       const i = Math.round(((e.clientX - r.left - m.left) / (W - m.left - m.right)) * (n - 1));
       if (i < 0 || i >= n) return;
@@ -125,8 +141,7 @@ export function lineChart(container, { series, xLabel, xTickLabel = (x) => x, ti
         .sort((a, b) => b.values[i] - a.values[i])
         .map((s) => ({ value: `${(s.values[i] * 100).toFixed(1)}%`, label: s.name, color: s.color }));
       showTip(e, tipTitle(i), rows);
-    });
-    hit.addEventListener('pointerleave', () => { hair.setAttribute('visibility', 'hidden'); hideTip(); });
+    }, () => { hideHair(); hideTip(); });
   });
 }
 
@@ -181,8 +196,7 @@ export function scatter(container, { points, xLabel, yLabel, xRef, yRef, yInvert
     }
     for (const p of points) {
       const hitArea = el('circle', { cx: x(p.x), cy: yy(p.y), r: 14, fill: 'transparent' }, svg);
-      hitArea.addEventListener('pointermove', (e) => showTip(e, p.label, p.tip));
-      hitArea.addEventListener('pointerleave', hideTip);
+      onHover(hitArea, (e) => showTip(e, p.label, p.tip));
     }
   });
 }
@@ -212,11 +226,10 @@ export function calibration(container, bins) {
     for (const b of bins) {
       el('circle', { cx: x(b.predicted), cy: y(b.observed), r: 4 + 8 * Math.sqrt(b.n / maxN), class: 'dot' }, svg);
       const hitArea = el('circle', { cx: x(b.predicted), cy: y(b.observed), r: 16, fill: 'transparent' }, svg);
-      hitArea.addEventListener('pointermove', (e) => showTip(e, `Predicted ≈ ${Math.round(b.predicted * 100)}%`, [
+      onHover(hitArea, (e) => showTip(e, `Predicted ≈ ${Math.round(b.predicted * 100)}%`, [
         { value: `${Math.round(b.observed * 100)}%`, label: 'actually happened' },
         { value: b.n.toLocaleString('en'), label: 'predictions' },
       ]));
-      hitArea.addEventListener('pointerleave', hideTip);
     }
   });
 }
@@ -264,15 +277,16 @@ export function columns(container, { values, xTickLabel = (i) => i, colorOf = ()
       const hit = el('rect', { x: m.left, y: m.top, width: W - m.left - m.right, height: H - m.top - m.bottom, fill: 'transparent' }, svg);
       const hl = el('rect', { y: m.top, height: H - m.top - m.bottom, width: bw, class: 'hover-band', visibility: 'hidden' }, svg);
       svg.insertBefore(hl, svg.firstChild);
-      hit.addEventListener('pointermove', (e) => {
+      const hideBand = () => hl.setAttribute('visibility', 'hidden');
+      onHover(hit, (e) => {
+        setOwner(hideBand);
         const r = svg.getBoundingClientRect();
         const i = Math.floor((e.clientX - r.left - m.left) / bw);
         if (i < 0 || i >= n) return;
         hl.setAttribute('x', x(i)); hl.setAttribute('visibility', 'visible');
         const [title, rows] = tip(i, values[i]);
         showTip(e, title, rows);
-      });
-      hit.addEventListener('pointerleave', () => { hl.setAttribute('visibility', 'hidden'); hideTip(); });
+      }, () => { hideBand(); hideTip(); });
     }
   });
 }

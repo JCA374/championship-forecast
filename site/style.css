@@ -314,3 +314,29 @@ sup { font-size: 10px; color: var(--zone-down); margin-left: 2px; }
   .team-grid { grid-template-columns: 1fr; }
   .topnav-inner { gap: 14px; }
 }
+
+/* touch screens: bigger tap targets, no zoom-on-focus (iOS zooms into inputs under 16px) */
+html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+button, select, a { touch-action: manipulation; }
+@media (pointer: coarse) {
+  select { font-size: 16px; }
+  .topnav-inner { height: 48px; }
+  .topnav a { padding: 14px 0; }
+  .pick button { width: 44px; height: 40px; }
+  button.teams { padding: 10px 0; }
+  #table td.team button, .heatmap th.rowhead button { padding: 6px 0; }
+  .tabs button { padding: 9px 14px; }
+  #run { padding: 9px 16px; }
+  select { padding: 8px 12px; }
+  .chart-box { -webkit-user-select: none; user-select: none; }
+}
+@media (pointer: coarse) {
+  button[data-focus] { min-height: 36px; display: inline-flex; align-items: center; }
+}
+/* phones: keep the odds on screen; the points range and top-2/top-6 are in the team card */
+@media (max-width: 600px) {
+  #table .narrow-hide, .range-keys { display: none; }
+  #table .prob { min-width: 54px; }
+  #table .th-note { display: none; }
+  #table td.team button { max-width: 128px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; display: block; }
+}

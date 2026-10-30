@@ -1,4 +1,4 @@
-import { lineChart, scatter, calibration, columns, showTip, hideTip, SERIES } from './charts.js';
+import { lineChart, scatter, calibration, columns, showTip, onHover, SERIES } from './charts.js';
 
 // football-data.co.uk short names → names to show
 const DISPLAY_NAMES = {
@@ -55,9 +55,12 @@ async function init() {
       renderFixtures();
       syncOverrideUi();
       renderStrength();
+      // a quick 1,000-season pass first, so slow phones see a table sooner
+      forecaster.postMessage({ type: 'forecast', id: 'preview', nSims: 1000, seed: 1, overrides });
       run(1);
     }
     if (msg.type === 'forecast' && msg.id === requestId) showForecast(msg);
+    if (msg.type === 'forecast' && msg.id === 'preview' && !rows.length) showForecast(msg, true);
   };
   forecaster.postMessage({ type: 'init', data });
 
@@ -67,8 +70,6 @@ async function init() {
     if (msg.type === 'backtest-progress') $('#acc-progress').value = msg.done;
     if (msg.type === 'backtest') renderAccuracy(msg);
   };
-  background.postMessage({ type: 'init', data });
-  background.postMessage({ type: 'race', nSims: 2000 });
 
   $('#run').addEventListener('click', () => run(Math.floor(Math.random() * 2 ** 31)));
   $('#nsims').addEventListener('change', () => run(1));
@@ -97,7 +98,15 @@ function run(seed) {
   forecaster.postMessage({ type: 'forecast', id: ++requestId, nSims, seed, overrides });
 }
 
-function showForecast(msg) {
+let backgroundStarted = false;
+
+function showForecast(msg, preview = false) {
+  // the replay and backtest wait until the full forecast is up: phones have few cores
+  if (!backgroundStarted && !preview) {
+    backgroundStarted = true;
+    background.postMessage({ type: 'init', data });
+    background.postMessage({ type: 'race', nSims: 2000 });
+  }
   rows = msg.rows.sort((a, b) => b.expectedPts - a.expectedPts);
   if (focus == null) focus = rows[0].team;
   renderTiles();
@@ -105,6 +114,7 @@ function showForecast(msg) {
   renderTeamPicker();
   renderTeam();
   renderHeatmap();
+  if (preview) return;   // status and button wait for the full run
   const nSims = Number($('#nsims').value);
   $('#status').textContent = `Played out ${nSims.toLocaleString('en')} seasons in your browser in ${(msg.ms / 1000).toFixed(1)} s`;
   $('#run').disabled = false;
@@ -196,15 +206,15 @@ function renderTable() {
       <td class="num dim opt">${r.played}</td>
       <td class="num">${r.pts}${ded ? `<sup title="${ded} points deducted">−${ded}</sup>` : ''}</td>
       <td class="num dim opt">${gd > 0 ? '+' : ''}${gd}</td>
-      <td class="range" data-team="${r.team}"><div class="range-track">
+      <td class="range narrow-hide" data-team="${r.team}"><div class="range-track">
         <span class="rbar" style="left:${at(r.ptsLow)};width:calc(${at(r.ptsHigh)} - ${at(r.ptsLow)})"></span>
         <span class="rdot" style="left:${at(r.pts)}"></span>
         <span class="rtick" style="left:${at(r.expectedPts)}"></span>
       </div></td>
       <td class="num"><b>${r.expectedPts.toFixed(1)}</b></td>
-      ${probCell(Z.title(r))}
-      ${probCell(Z.top2(r), 'up')}
-      ${probCell(Z.top6(r), 'po')}
+      ${probCell(Z.title(r), 'narrow-hide')}
+      ${probCell(Z.top2(r), 'up narrow-hide')}
+      ${probCell(Z.top6(r), 'po narrow-hide')}
       ${probCell(Z.promoted(r), 'up strong')}
       ${probCell(Z.down(r), 'down')}
     </tr>`;
@@ -212,12 +222,11 @@ function renderTable() {
 
   for (const cell of document.querySelectorAll('td.range')) {
     const r = rows.find((x) => x.team === Number(cell.dataset.team));
-    cell.addEventListener('pointermove', (e) => showTip(e, name(r.team), [
+    onHover(cell, (e) => showTip(e, name(r.team), [
       { value: r.pts, label: 'points now' },
       { value: r.expectedPts.toFixed(1), label: 'expected final points' },
       { value: `${r.ptsLow}–${r.ptsHigh}`, label: 'likely range (80%)' },
     ]));
-    cell.addEventListener('pointerleave', hideTip);
   }
 }
 
