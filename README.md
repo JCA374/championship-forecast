@@ -3,6 +3,8 @@
 EFL Championship season forecast that runs in your browser: a Dixon-Coles model fitted on Premier League,
 Championship and League One results, then thousands of simulated seasons including the playoffs.
 
+**▶ Live forecast: [jca374.github.io/championship-forecast](https://jca374.github.io/championship-forecast/)**
+
 ```bash
 python scripts/export_site_data.py --fetch   # refresh data
 python -m http.server -d site 8000           # open http://localhost:8000
