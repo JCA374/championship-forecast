@@ -159,14 +159,20 @@ function syncOverrideUi() {
 // ── tiles ───────────────────────────────────────────────────────────────────
 
 function renderTiles() {
-  const best = (f) => rows.reduce((a, b) => (f(b) > f(a) ? b : a));
+  // each tile names a different team: the title favourite usually also leads promotion and playoff odds
+  const shown = new Set();
+  const best = (f) => {
+    const r = rows.filter((x) => !shown.has(x.team)).reduce((a, b) => (f(b) > f(a) ? b : a));
+    shown.add(r.team);
+    return r;
+  };
   const tile = (label, r, p, note, zone) =>
     `<div class="tile ${zone}"><div class="tile-label">${label}</div><div class="tile-value">${pct(p)}</div>` +
     `<button type="button" class="tile-team" data-focus="${r.team}">${esc(name(r.team))}</button><div class="tile-note">${note}</div></div>`;
   const champ = best(Z.title), up = best(Z.promoted), po = best((r) => r.playoffWin), down = best(Z.down);
   $('#tiles').innerHTML =
     tile('Title favourite', champ, Z.title(champ), 'chance of finishing 1st', '') +
-    tile('Likeliest promoted', up, Z.promoted(up), 'top two or playoff winners', 'up') +
+    tile('Next likeliest promoted', up, Z.promoted(up), 'top two or playoff winners', 'up') +
     tile('Playoff favourite', po, po.playoffWin, 'chance of winning the playoffs', 'po') +
     tile('Likeliest relegated', down, Z.down(down), `chance of finishing in the bottom ${zones.relegated}`, 'down');
 }
